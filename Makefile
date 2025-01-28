@@ -16,7 +16,7 @@ drun:
 	docker run --rm -it --privileged \
 		--platform linux/amd64 \
 		--user $(id -u):$(id -g) \
-		--device=$(TTY_DEV) \
+		--device=$(TTY_DEV):$(TTY_DEV) \
 		--group-add dialout \
 		--cap-add=SYS_ADMIN \
 		--cap-add=SYS_RAWIO \
